@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Text
-%define	pnam	Iconv
+%define		pdir	Text
+%define		pnam	Iconv
 Summary:	Text::Iconv perl module
 Summary(pl):	Modu³ perla Text::Iconv
 Name:		perl-Text-Iconv
