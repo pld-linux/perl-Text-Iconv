@@ -8,13 +8,13 @@
 Summary:	Text::Iconv perl module
 Summary(pl):	Modu³ perla Text::Iconv
 Name:		perl-Text-Iconv
-Version:	1.2
-Release:	4
+Version:	1.4
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	eb1bfd6f713024bbad95048b367abdf9
+# Source0-md5:	3e9306e9262ff13bb9ba29a251c5094a
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
