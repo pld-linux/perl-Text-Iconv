@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	Iconv
-Summary:	Text-Iconv perl module
-Summary(pl):	Modu³ perla Text-Iconv
+Summary:	Text::Iconv perl module
+Summary(pl):	Modu³ perla Text::Iconv
 Name:		perl-Text-Iconv
 Version:	1.1
 Release:	3
