@@ -5,7 +5,7 @@ Summary:	Text-Iconv perl module
 Summary(pl):	Modu³ perla Text-Iconv
 Name:		perl-Text-Iconv
 Version:	1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
@@ -34,6 +34,11 @@ This module provides a Perl interface to the iconv() codeset
 conversion function, as defined by the Single UNIX Specification. For
 more details see the POD documentation embedded in the file Iconv.pm,
 which will also be installed as Text::Iconv(3) man page.
+
+%description -l pl
+Ten modu³ dostarcza interfejs Perla do funkcji iconv() konwertuj±cej
+pomiêdzy kodowaniami znaków, zgodnej z Single UNIX Specification.
+Wiêcej informacji znajduje siê w manualu Text::Iconv(3).
 
 %prep
 %setup -q -n Text-Iconv-%{version}
