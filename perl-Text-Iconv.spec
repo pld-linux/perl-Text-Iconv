@@ -1,11 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	Iconv
-%include	/usr/lib/rpm/macros.perl
 Summary:	Text-Iconv perl module
 Summary(pl):	Modu³ perla Text-Iconv
 Name:		perl-Text-Iconv
 Version:	1.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -26,7 +26,7 @@ pomiêdzy kodowaniami znaków, zgodnej z Single UNIX Specification.
 Wiêcej informacji znajduje siê w manualu Text::Iconv(3).
 
 %prep
-%setup -q -n Text-Iconv-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
