@@ -5,12 +5,12 @@ Summary:	Text::Iconv perl module
 Summary(pl):	Modu³ perla Text::Iconv
 Name:		perl-Text-Iconv
 Version:	1.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-devel >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +28,8 @@ Wiêcej informacji znajduje siê w manualu Text::Iconv(3).
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 %{!?_without_tests:%{__make} test}
 
@@ -43,9 +44,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/Text/Iconv.pm
-%dir %{perl_sitearch}/auto/Text/Iconv
-%{perl_sitearch}/auto/Text/Iconv/autosplit.ix
-%{perl_sitearch}/auto/Text/Iconv/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Text/Iconv/*.so
+%{perl_vendorarch}/Text/Iconv.pm
+%dir %{perl_vendorarch}/auto/Text/Iconv
+%{perl_vendorarch}/auto/Text/Iconv/autosplit.ix
+%{perl_vendorarch}/auto/Text/Iconv/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Text/Iconv/*.so
 %{_mandir}/man3/*
