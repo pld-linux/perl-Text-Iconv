@@ -5,13 +5,12 @@ Summary:	Text::Iconv perl module
 Summary(pl):	Modu³ perla Text::Iconv
 Name:		perl-Text-Iconv
 Version:	1.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl >= 5.6.1
+BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,8 +29,8 @@ Wiêcej informacji znajduje siê w manualu Text::Iconv(3).
 
 %build
 perl Makefile.PL
-%{__make}
-%{__make} test
+%{__make} OPTIMIZE="%{rpmcflags}"
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -44,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/auto/Text/Iconv
 %{perl_sitearch}/Text/Iconv.pm
+%dir %{perl_sitearch}/auto/Text/Iconv
+%{perl_sitearch}/auto/Text/Iconv/autosplit.ix
+%{perl_sitearch}/auto/Text/Iconv/*.bs
+%attr(755,root,root) %{perl_sitearch}/auto/Text/Iconv/*.so
 %{_mandir}/man3/*
