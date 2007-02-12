@@ -6,7 +6,7 @@
 %define		pdir	Text
 %define		pnam	Iconv
 Summary:	Text::Iconv perl module
-Summary(pl):	Modu³ perla Text::Iconv
+Summary(pl.UTF-8):   ModuÅ‚ perla Text::Iconv
 Name:		perl-Text-Iconv
 Version:	1.4
 Release:	1
@@ -25,10 +25,10 @@ conversion function, as defined by the Single UNIX Specification. For
 more details see the POD documentation embedded in the file Iconv.pm,
 which will also be installed as Text::Iconv(3) man page.
 
-%description -l pl
-Ten modu³ dostarcza interfejs Perla do funkcji iconv() konwertuj±cej
-pomiêdzy kodowaniami znaków, zgodnej z Single UNIX Specification.
-Wiêcej informacji znajduje siê w manualu Text::Iconv(3).
+%description -l pl.UTF-8
+Ten moduÅ‚ dostarcza interfejs Perla do funkcji iconv() konwertujÄ…cej
+pomiÄ™dzy kodowaniami znakÃ³w, zgodnej z Single UNIX Specification.
+WiÄ™cej informacji znajduje siÄ™ w manualu Text::Iconv(3).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
