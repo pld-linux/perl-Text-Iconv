@@ -6,7 +6,7 @@
 %define		pdir	Text
 %define		pnam	Iconv
 Summary:	Text::Iconv perl module
-Summary(pl.UTF-8):   Moduł perla Text::Iconv
+Summary(pl.UTF-8):	Moduł perla Text::Iconv
 Name:		perl-Text-Iconv
 Version:	1.4
 Release:	1
