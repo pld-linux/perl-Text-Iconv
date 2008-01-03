@@ -5,16 +5,17 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Text
 %define		pnam	Iconv
-Summary:	Text::Iconv perl module
-Summary(pl.UTF-8):	Moduł perla Text::Iconv
+Summary:	Text::Iconv - Perl interface to iconv() codeset conversion function
+Summary(pl.UTF-8):	Text::Iconv - perlowy interfejs do funkcji przekodowującej iconv()
 Name:		perl-Text-Iconv
 Version:	1.7
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	81b26e069eaebb084e91ea3c009b67ae
+URL:		http://search.cpan.org/dist/Text-Iconv/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
