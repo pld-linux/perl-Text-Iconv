@@ -58,6 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Text/Iconv.pm
 %dir %{perl_vendorarch}/auto/Text/Iconv
 %{perl_vendorarch}/auto/Text/Iconv/autosplit.ix
-%{perl_vendorarch}/auto/Text/Iconv/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Text/Iconv/*.so
 %{_mandir}/man3/*
