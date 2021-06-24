@@ -14,9 +14,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	81b26e069eaebb084e91ea3c009b67ae
-URL:		http://search.cpan.org/dist/Text-Iconv/
+URL:		https://metacpan.org/dist/Text-Iconv
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,5 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Text/Iconv.pm
 %dir %{perl_vendorarch}/auto/Text/Iconv
 %{perl_vendorarch}/auto/Text/Iconv/autosplit.ix
-%attr(755,root,root) %{perl_vendorarch}/auto/Text/Iconv/*.so
-%{_mandir}/man3/*
+%attr(755,root,root) %{perl_vendorarch}/auto/Text/Iconv/Iconv.so
+%{_mandir}/man3/Text::Iconv.3pm*
