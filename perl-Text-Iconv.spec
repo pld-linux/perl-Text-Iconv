@@ -8,7 +8,7 @@ Summary:	Text::Iconv - Perl interface to iconv() codeset conversion function
 Summary(pl.UTF-8):	Text::Iconv - perlowy interfejs do funkcji przekodowującej iconv()
 Name:		perl-Text-Iconv
 Version:	1.7
-Release:	22
+Release:	23
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
